@@ -1,0 +1,131 @@
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+}
+@mixin button {
+  color: cornflowerblue;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px 5px;
+  border: 1px solid black;
+}
+@mixin border-pad {
+  border: 1px solid black;
+  padding: 5px 5px;
+}
+#header,
+#footer,
+#content {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+#header {
+  height: 100px;
+  top: 0;
+  @include border-pad;
+}
+#footer {
+  height: 100px;
+  bottom: 0;
+  @include border-pad;
+}
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px 50px;
+  // margin-left:50px;
+  // margin-right: 50px;
+}
+
+th, td {
+  padding: 15px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content {
+  top: 100px;
+  bottom: 100px;
+  overflow: hidden; /* use this if don't want any window scrollbars and use an inner element for scrolling*/
+}
+
+.label0{
+  @include border-pad;
+  text-align: center;
+  padding:8px 8px;
+  border-radius: 10px;
+}
+.label {
+  @include border-pad;
+  text-align: center;
+  margin: 20px 50px;
+}
+.label1 {
+  margin: 50px 50px;  
+  
+}
+.profile-block {
+  border: 1px solid black;
+  margin: 20px 50px;
+  padding: 5px 5px;
+}
+
+.flexColumn {
+  //@include border-pad;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.flexRow {
+  display: flex;
+  padding-top:5px;
+}
+.but {
+  display: flex;
+  justify-content: flex-end;
+}
+.header {
+  display: flex;
+  padding: 30px 15px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid black;
+}
+label{
+  display: inline-block;
+  width: 10%;
+  position: relative;
+  padding-right: 10px;
+}
+label::after{
+  content: ":";
+  position: absolute;
+  right: 10px;
+}
+// .alignMe b {
+//   display: inline-block;
+//   width: 10%;
+//   position: relative;
+//   padding-right: 10px; /* Ensures colon does not overlay the text */
+// }
+
+// .alignMe b::after {
+//   content: ":";
+//   position: absolute;
+//   right: 10px;
+// }
+
